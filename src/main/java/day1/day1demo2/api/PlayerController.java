@@ -9,13 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/players")
+@RequestMapping("/api/players") // Data endpoint?
 public class PlayerController {
     PlayerRepository playerRepository;
     public PlayerController(PlayerRepository playerRepository) {
         this.playerRepository = playerRepository;
     }
+
+
     @GetMapping
+    // RestController returns a JSON with list of players?
     List<Player> getPlayers() {
         return  playerRepository.findAll();
     }

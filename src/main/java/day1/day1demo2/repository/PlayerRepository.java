@@ -4,4 +4,7 @@ import day1.day1demo2.entity.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PlayerRepository extends JpaRepository<Player,Integer> {
+    Player findByName(String playerName);
+
+    Player findByNameLike(String playerName);
 }

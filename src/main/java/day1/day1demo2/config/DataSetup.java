@@ -46,8 +46,6 @@ public class DataSetup implements ApplicationRunner {
         players.add(new Player("Marcelo", "Brazil", "Defender"));
         players.add(new Player("Thibaut Courtois","Belgium","Goalkeeper"));
         playerRepository.saveAll(players);
-
-
     }
 
 
